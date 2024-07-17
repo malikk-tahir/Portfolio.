@@ -1,0 +1,352 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#header{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    padding: 30px 8%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1{
+    color: yellow;
+    font-size: xx-large;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom:-5px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.name{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.name p{
+    margin-bottom: 15px;
+}
+.name h1 span{
+    color: yellow;
+}
+.frontimg img{
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    z-index: -1;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+#About{
+    padding: 30px 0px;
+}
+.row{
+    display: flex;
+}
+.column1{
+    margin-right: 70px;
+}
+.column1 img{
+    width:400px;
+    height: 420px;
+    border-radius: 5%;
+}
+.column2 p{
+    margin-top: 10px;
+}
+.abouttitle{
+    display: flex;
+    margin-top: 15px;
+}
+.title{
+    margin-right: 50px;
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+}
+.aboutcontent{
+    margin-top: 25px;
+}
+.aboutcontent ul li{
+    list-style: none;
+    margin-top: 12px;
+}
+.aboutcontent ul li span{
+    color: yellow;
+}
+.aboutcontent{
+    display: none;
+}
+.aboutcontent.activecontent{
+    display: block;
+}
+#Skills h3{
+    color: yellow;
+}
+#Skills ul li span{
+    color:gray;
+}
+
+.subtitle{
+    font-size:45px;
+    font-weight:bolder;
+}
+#portfolio{
+    padding: 30px 0px;
+}
+.mywork{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.work{
+    position: relative;
+    transition: transform 0.5s;
+}
+.work img{
+    margin-top: 50px;
+    height: 380px;
+    width: 320px;
+    border-radius: 6%;
+}
+.description{
+    height: 385px;
+    width: 320px;
+    background: linear-gradient(rgba(0,0,0,0.6),gray);
+    border-radius: 6%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+}
+.description h3{
+    font-weight:bolder ;
+    margin-bottom: 12px;
+}
+.description a{
+    margin-top: 15px;
+    background-color: white;
+    height: 40px ;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+.description a img{
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left: 11px;
+    bottom: 11px;
+}
+.work:hover{
+    transform: translateY(-10px);
+}
+
+.description:hover{
+    background: linear-gradient(rgba(0,0,0,0.6),yellow);
+}
+
+#contact{
+    padding: 30px 0px;
+}
+.columnleft{
+    margin-right: 190px;
+}
+.edit img{
+    background-color: white;
+}
+.columnleft p{
+    display: flex;
+    align-items: center;
+    margin:25px 0px;
+}
+.columnleft p img{
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+.ids{
+    display: flex;
+}
+.ids a img{
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.ids a:hover img{
+    transform: translateY(-8px);
+}
+.btn{
+    background-color: grey;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+}
+.columnright form {
+    width: 600px;
+    height: 310px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+form input,form textarea{
+    padding: 15px 15px;
+    border-radius:8px;
+}
+.btn1{
+    background-color: grey;
+    padding: 12px 25px;
+    border-radius: 6px;
+    color:white;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#copyright{
+    padding: 40px 0px;
+    background-color: gray;
+    text-align: center;
+    margin-top: 100px;
+}
+#copyright p{
+    font-weight: 700;
+}
+
+/* reponsive website */
+
+nav img{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    nav img{
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        padding: 5px 5px;
+        display: block;
+        cursor: pointer;
+    }
+    nav ul{
+        background-color: gray;
+        position: fixed;
+        top: 0;
+        right: -170px;
+        width: 170px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px;        
+    }
+    nav ul img{
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+    }
+    .name{
+        margin-top: 110%;
+        font-size: 15px;
+    }
+    .row{
+        display: block;
+    }
+    .column1{
+        margin-bottom: 40px;
+    }
+    .column1 img{
+        width:315px;
+        height: 330px;
+        border-radius: 5%;
+    }
+    .mywork{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .work img{
+        margin-top: 50px;
+        height: 350px;
+        width: 310px;
+        border-radius: 6%;
+    }
+    .description{
+        height: 355px;
+        width: 310px;
+    }
+    .columnleft{
+        margin-bottom: 100px;
+        width: 315px;
+    }
+    .subtitle{
+        font-size:30px;
+        font-weight:bolder;
+    }
+    .columnright form {
+        width: 315px;
+        height: 310px;
+    }
+    #copyright{
+        padding: 40px 10px;
+        font-size: 10px;
+    }
+    .frontimg img{
+        height: 250px;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+}
